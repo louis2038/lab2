@@ -38,7 +38,6 @@ void parallel_bubble_sort(uint64_t *T, const uint64_t size) {
         
         #pragma omp parallel for schedule(dynamic)
         for (int c = 0; c < size; c += chunk_size) {
-            
             char sorted = 0;
             for(int i = 0; i < size && !sorted; i++) {
                 sorted = 1;

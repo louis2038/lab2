@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import re
 
-nr_threads_list = [2, 4]
+nr_threads_list = [1, 2, 4]
 
 def run_and_plot(exec_name: str, start_range: int, end_range: int):
     print(f"Benchmarking: {exec_name}")
@@ -81,6 +81,6 @@ def run_and_plot(exec_name: str, start_range: int, end_range: int):
     
     plt.close()
 if __name__ == "__main__":    
-    run_and_plot("./bubble.run", 2, 8)
-    run_and_plot("./mergesort.run", 6, 14)
-    run_and_plot("./odd-even.run", 6, 14)
+    run_and_plot("./bubble.run", 2, 12)
+    run_and_plot("./mergesort.run", 6, 18)
+    run_and_plot("./odd-even.run", 6, 12)
